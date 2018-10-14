@@ -24,9 +24,9 @@ module shaftHolder() {
         difference() {
             translate([-10,boxWidth,0]) {
                 rotate([90,0,90])
-                cube([10,30,boxHeight+20]);
+                cube([10,10,boxHeight+20]);
             }
-            translate([boxHeight-4,boxWidth-5,20]) {
+            translate([boxHeight-10,boxWidth+5,15]) {
                 rotate([0,90,0]) {
                     #cylinder(d=15,h=15);
                 }
@@ -66,7 +66,7 @@ module squareBox(length,width) {
 module tube(height,location) {
     translate([-1,location,height]) {
         rotate([0,90,0]) {
-            #cylinder(d=3.5,h=7); 
+            cylinder(d=3.5,h=7); 
         }
     }
 }
