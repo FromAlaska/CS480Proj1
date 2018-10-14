@@ -4,7 +4,7 @@ boxWidth = 10;
 boxHeight = 140;
 
 stiltTowerHeight = 80;
-shaftHeight = 90;
+shaftHeight = 80;
 
 casing();
 
