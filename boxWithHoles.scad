@@ -23,7 +23,7 @@ module squareBox(length,width) {
 module tube(height,location) {
     translate([-1,location,height]) {
         rotate([0,90,0]) {
-            cylinder(d=3.1,h=7); 
+            #cylinder(d=3.5,h=7); 
         }
     }
 }
