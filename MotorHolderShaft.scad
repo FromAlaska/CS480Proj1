@@ -51,7 +51,9 @@ module makesHoles() {
     union() {
         difference() {
             squareBox(boxLength,boxWidth);
-            tube(5,5);
+            #tube(5,5);
+            #tube(7,5);
+            #tube(10,5);
             tube(5,boxWidth-5);
         }
     }
