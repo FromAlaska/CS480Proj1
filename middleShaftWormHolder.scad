@@ -12,7 +12,7 @@ module makesHoles() {
             tube(5,boxWidth-5);
         }
         translate([0,12,10]) {
-            #cube([10,41,7]);
+            #cube([10,39.5,5]);
         }
     }
 }
