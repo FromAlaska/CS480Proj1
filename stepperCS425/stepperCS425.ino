@@ -49,8 +49,8 @@ void loop() {
   int oldButton2 = buttonState2;
   buttonState = digitalRead(buttonPin2);
   buttonState2 = digitalRead(buttonPin3);
-  Serial.println(buttonState);
-  Serial.println(buttonState2);
+  Serial.print(buttonState);
+  Serial.print(buttonState2);
   if (oldButton != buttonState)
   {
       lastDebounce1 = millis();
@@ -61,7 +61,7 @@ void loop() {
   }
   if (buttonState == HIGH && ((millis()-lastDebounce1)>debounceMillis) && runOnce==0) {
       // step one revolution  in one direction:
-      Serial.println("clockwise");
+      Serial.print("clockwise");
       myStepper.step(stepsPerRevolution);
       runOnce=1;
       delay(10);
@@ -69,10 +69,11 @@ void loop() {
   
   if(buttonState2 == HIGH && ((millis()-lastDebounce2)>debounceMillis)&& runOnce==0) {
     // step one revolution in the other direction:
-    Serial.println("counterclockwise");
+    Serial.print("counterclockwise");
     myStepper.step(-stepsPerRevolution);
     runOnce=1;
     delay(10);
   }
+  Serial.println();
   //delay(1000);
 }
